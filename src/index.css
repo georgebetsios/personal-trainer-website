@@ -1,0 +1,20 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+body {
+  background: linear-gradient(135deg, #8aa8e187, #375fa4);
+  color: white;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding-top: 70px;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
