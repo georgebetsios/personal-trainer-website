@@ -10,34 +10,37 @@ export default function Home() {
                 position: "relative"
             }}
         >
-            <h1 className="display-4 fw-bold mb-3 home-text" style={{ animationDelay: "0.2s" }}>
+            <h1 className="display-4 fw-bold mb-4 home-text">
                 Γεια! Είμαι ο Δημήτρης, Personal Trainer
             </h1>
-            <p className="lead mb-2 home-text" style={{ animationDelay: "0.4s" }}>
-                Μετατρέπω στόχους σε αποτελέσματα!
+            <p className="lead mb-4 home-text">
+                Μαζί μετατρέπουμε τους στόχους σας σε αποτελέσματα!
             </p>
-            <p className="mb-4 fst-italic home-text" style={{ animationDelay: "0.6s" }}>
-                Δύναμη, Υγεία, Ενέργεια – Μαζί θα τα καταφέρουμε!
+            <p className="mb-4 fst-italic home-text">
+                Δύναμη, Υγεία, Ενέργεια – σε κάθε σας βήμα!
             </p>
-            <div className="home-text" style={{ animationDelay: "0.8s" }}>
+            <div className="home-text ">
                 <a
-                    href="/contact"
+                    href="#contact"
                     className="contact-btn"
                     style={{ fontWeight: "600" }}
                 >
-                    Κλείστε συνεδρία
+                    Επικοινωνήστε μαζί μου
                 </a>
             </div>
-            <p className="mt-4 home-text" style={{ animationDelay: "1s" }}>
-                Με χρόνια εμπειρίας στον αθλητισμό και τη διατροφή, βοηθάω ανθρώπους να πετύχουν τους στόχους τους.
+            <p className="mb-5 mt-4 home-text">
+                Με πολυετή εμπειρία στον αθλητισμό, βοηθάω ανθρώπους να βελτιώσουν τη φυσική τους κατάσταση,
+                να ενισχύσουν την αυτοπεποίθησή τους και να κάνουν την αλλαγή που ονειρεύονται.
             </p>
-            <p className="home-text" style={{ animationDelay: "1.2s" }}>
-                Προσωπικές προπονήσεις, online coaching και προγράμματα διατροφής για κάθε επίπεδο.
+            <p className="home-text">
+                Προσφέρω <strong>προσωπικές προπονήσεις</strong> και <strong>online coaching</strong>.
+                Επιπλέον, υπάρχει συνεργασία με διατροφολόγο για όσους θέλουν
+                υποστήριξη και στη διατροφή τους.
             </p>
 
             <div className="d-flex justify-content-center mt-4 home-image">
                 <img
-                    src="/user.png"
+                    src="./public/user.png"
                     alt="Δημήτρης - Personal Trainer"
                     className="img-fluid rounded-circle shadow-lg home-image"
                     style={{ maxHeight: "400px", width: "50%", objectFit: "cover" }}

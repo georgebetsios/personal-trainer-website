@@ -1,0 +1,56 @@
+.about-section {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.about-card {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(6px);
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    max-width: 300px;
+    flex: 1 1 250px;
+    opacity: 0;
+    transform: translateX(50%);
+    transition: all 0.8s ease;
+}
+
+.about-card.visible {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.about-card h3 {
+    font-size: 1.6rem;
+    color: #30485f;
+    /* πιο σκούρο χρώμα για τίτλους */
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.about-card p {
+    font-size: 1.1rem;
+    color: #1c1c1c;
+    /* σκούρο κείμενο για ευκρίνεια */
+    line-height: 1.5;
+    text-align: center;
+}
+
+.about-section-container {
+    padding: 2rem 0;
+}
+
+.about-title {
+    font-family: 'Montserrat', 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 530;
+    color: #eaeef5;
+}

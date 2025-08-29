@@ -4,6 +4,7 @@
   box-shadow: 0 6px 20px rgba(0,0,0,0.15);
   text-align: center;
   animation: fadeSlideUp 0.8s ease forwards;
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 @keyframes fadeSlideUp {
@@ -20,6 +21,9 @@
 .home-text:nth-child(1) { animation-delay: 0.2s; }
 .home-text:nth-child(2) { animation-delay: 0.4s; }
 .home-text:nth-child(3) { animation-delay: 0.6s; }
+.home-text:nth-child(4) { animation-delay: 0.8s; }
+.home-text:nth-child(5) { animation-delay: 1s; }
+.home-text:nth-child(6) { animation-delay: 1.2s; }
 
 @keyframes fadeIn {
   from { opacity: 0; }
@@ -28,6 +32,7 @@
 
 .contact-btn {
   display: inline-block;
+  margin-bottom: 1rem;
   background: linear-gradient(135deg, #4969a1, #5c7cb7);
   color: #fff;
   padding: 0.8rem 1.8rem;
@@ -62,15 +67,25 @@
 
 
 .home-section h1 {
+  font-family: 'Montserrat', 'Poppins', sans-serif;
   font-size: 2.8rem;
   font-weight: 700;
-  color: #2c3e50;
+  color: #0d3e6fad;
   margin-bottom: 1rem;
+}
+
+.home-section p {
+  color: #fefefe;/* ήπιο λευκό/μπλε για καλύτερη ανάγνωση */
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2); /* subtle shadow για contrast */
+  transition: color 0.3s ease;
 }
 
 .home-section p.lead {
   font-size: 1.4rem;
-  color: #34495e;
   margin-bottom: 2rem;
   line-height: 1.6;
 }
@@ -85,8 +100,8 @@
   .home-section p.lead {
     font-size: 1.2rem;
   }
-  .btn-gradient {
+  .contact-btn {
     font-size: 1rem;
-    padding: 0.7rem 1.5rem;
+    padding: 1rem 1.5rem;
   }
 }

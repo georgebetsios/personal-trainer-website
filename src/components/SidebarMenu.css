@@ -2,9 +2,9 @@
 .sidebar {
     position: fixed;
     top: 0;
-    right: -250px;
+    right: -270px;
     /* κρυφό αρχικά */
-    width: 250px;
+    width: 270px;
     height: 100%;
     background: rgba(20, 25, 40, 0.95);
     backdrop-filter: blur(10px);
@@ -104,6 +104,11 @@
     color: white;
     z-index: 1100;
     cursor: pointer;
+}
+
+.navbar .container-fluid {
+    max-width: 1200px; /* ή όποιο πλάτος θέλεις */
+    margin: 0 auto;
 }
 
 /* Desktop links styling */

@@ -1,1 +1,23 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
 
+section, div[id] {
+  min-height: 100vh;
+  padding: 70px 0; /* για να μην καλύπτει η navbar το section */
+}
+
+/* Για tablet */
+@media (max-width: 992px) {
+  html {
+    scroll-padding-top: 50px; /* μικρότερο navbar */
+  }
+}
+
+/* Για κινητό */
+@media (max-width: 576px) {
+  html {
+    scroll-padding-top: 30px; /* ακόμα μικρότερο */
+  }
+}
