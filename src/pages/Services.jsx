@@ -39,13 +39,15 @@ export default function Services() {
   return (
     <div className="services-section-container">
       <h2 className="services-title text-center mb-4 mt-2">Υπηρεσίες</h2>
-      <div className="services-section row justify-content-center">
+      <div className="services-section">
         {services.map((service, i) => (
-          <div className="col-md-4 mb-3" key={i}>
-            <div className="service-card p-3" ref={el => cardsRef.current[i] = el}>
-              <h5>{service.title}</h5>
-              <p>{service.text}</p>
-            </div>
+          <div
+            className="service-card p-3"
+            key={i}
+            ref={el => cardsRef.current[i] = el}
+          >
+            <h5>{service.title}</h5>
+            <p>{service.text}</p>
           </div>
         ))}
       </div>
