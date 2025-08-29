@@ -40,7 +40,7 @@ export default function Home() {
 
             <div className="d-flex justify-content-center mt-4 home-image">
                 <img
-                    src="./public/user.png"
+                    src="./user.png"
                     alt="Δημήτρης - Personal Trainer"
                     className="img-fluid rounded-circle shadow-lg home-image"
                     style={{ maxHeight: "400px", width: "50%", objectFit: "cover" }}

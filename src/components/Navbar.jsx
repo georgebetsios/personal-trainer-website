@@ -49,7 +49,7 @@ export default function Navbar() {
                             cursor: "pointer",
                             padding: "0 0 10px"
                         }}><img
-                            src="./public/Personal_Trainer(2).png"           // βάζεις εδώ το όνομα του αρχείου σου στο public
+                            src="./Personal_Trainer(2).png"           // βάζεις εδώ το όνομα του αρχείου σου στο public
                             alt="Logo"
                             style={{ 
                                 height: "35px"
