@@ -1,30 +1,25 @@
-/* Sidebar container για mobile */
 .sidebar {
     position: fixed;
     top: 0;
     right: -270px;
-    /* κρυφό αρχικά */
     width: 270px;
     height: 100%;
-    background: rgba(20, 25, 40, 0.95);
+    background: linear-gradient(90deg, rgba(22, 22, 22, 0.686), rgb(14, 14, 14));
     backdrop-filter: blur(10px);
     color: white;
-    transition: right 0.3s ease;
+    transition: right 0.6s ease;
     z-index: 1050;
     padding-top: 5rem;
-    /* λίγο κάτω από το navbar */
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
 
-/* Όταν ανοίγει η sidebar */
 .sidebar.open {
     right: 0;
 }
 
-/* Close button X */
 .sidebar .close-btn {
     position: absolute;
     top: 0.5rem;
@@ -37,14 +32,12 @@
     cursor: pointer;
 }
 
-/* Links container */
 .sidebar-links {
     list-style: none;
     padding: 0;
     width: 100%;  
 }
 
-/* Κάθε link */
 .sidebar-links li {
     margin-bottom: 1.5rem;
     width: 100%;
@@ -54,7 +47,7 @@
     display: block;
     font-size: 1.2rem;
     font-weight: 500;
-    color: white;
+    color: rgba(255, 255, 255, 0.682);
     text-decoration: none;
     width: 100%;
     padding: 0.5rem 1rem;
@@ -66,17 +59,16 @@
 
 .sidebar-links li a:hover {
     background-color: rgba(255, 255, 255, 0.1);
-    color: #a3c0f9;
-    transform: translateX(3px);
+    color: rgb(255, 240, 221);
+    transform: translateX(2px);
 }
 
 .sidebar-links li a.active {
-  background-color: rgba(255,255,255,0.05);
-  color: #6496f9;
+  background-color: rgba(255, 255, 255, 0.094);
+  color: rgb(255, 240, 221);
   font-weight: 600;
 }
 
-/* Overlay για background όταν ανοίγει η sidebar */
 .sidebar-overlay {
     position: fixed;
     top: 0;
@@ -90,50 +82,42 @@
     z-index: 1040;
 }
 
-/* Overlay εμφανές όταν sidebar ανοίγει */
 .sidebar-overlay.show {
     opacity: 1;
     pointer-events: auto;
 }
 
-/* Hamburger button */
 .navbar-toggler {
-    border: none;
     background: none;
-    font-size: 1.8rem;
-    color: white;
     z-index: 1100;
-    cursor: pointer;
 }
 
+
 .navbar .container-fluid {
-    max-width: 1200px; /* ή όποιο πλάτος θέλεις */
+    max-width: 1200px; 
     margin: 0 auto;
 }
 
-/* Desktop links styling */
 .navbar-nav li a {
     font-size: 1.2rem;
     font-weight: 500;
-    color: rgba(255, 255, 255, 0.585); /* κανονικό link */
+    color: rgba(255, 255, 255, 0.585); 
     text-decoration: none;
     padding: 0.2rem 0.5rem;
     background-color: transparent;
-    transition: color 0.2s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* Hover: μόνο αλλαγή χρώματος ελαφρά */
 .navbar-nav li a:hover {
-    color: #ffffff; 
+    color: #ffffff;
+    transform: translateY(-2px);
 }
 
-/* Active link: πιο φωτεινό χρώμα */
 .navbar-nav li a.active {
     color: #ffffff !important;
     font-weight: 600;
 }
 
-/* Hide sidebar on large screens */
 @media (min-width: 992px) {
     .sidebar {
         display: none;

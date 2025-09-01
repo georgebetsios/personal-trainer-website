@@ -38,7 +38,7 @@ export default function Services() {
 
   return (
     <div className="services-section-container">
-      <h2 className="services-title text-center mb-4 mt-2">Υπηρεσίες</h2>
+      <h2 className="services-title text-center mb-4 mt-4">Υπηρεσίες</h2>
       <div className="services-section">
         {services.map((service, i) => (
           <div

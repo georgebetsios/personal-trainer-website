@@ -34,7 +34,7 @@ export default function About() {
 
   return (
     <div className="about-section-container">
-      <h2 className="about-title text-center mb-4 mt-2">Σχετικά με εμένα</h2>
+      <h2 className="about-title text-center mb-4 mt-4">Σxετικά με εμένα</h2>
       <div className="about-section">
         {aboutCards.map((card, i) => (
           <div className="about-card" key={i} ref={el => cardsRef.current[i] = el}>
@@ -43,6 +43,15 @@ export default function About() {
           </div>
         ))}
       </div>
+
+      <div className="home-image">
+                    <img
+                        src="./photo-profil.jpg"
+                        alt="Δημήτρης - Personal Trainer"
+                        className="rounded-circle home-image"
+                        style={{ maxHeight: "400px", width: "auto", objectFit: "cover" }}
+                    />
+                </div>
     </div>
   );
 }

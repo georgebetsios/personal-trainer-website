@@ -1,14 +1,22 @@
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  padding: 0 1rem;
+}
+
 .contact-section {
   background: rgba(253, 252, 252, 0.145);
   backdrop-filter: blur(10px);
   border-radius: 12px;
   max-width: 600px;
   margin: 2rem auto;
-  padding: 3rem 2rem;
+  padding: 3rem 3rem;
   opacity: 0;
   transform: translateY(50%);
   transition: all 0.8s ease;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   overflow: hidden;
 }
 
@@ -18,39 +26,60 @@
 }
 
 .contact-section h2 {
-  font-family: 'Montserrat', 'Poppins', sans-serif;
-  font-size: 2rem;
-  color: #f0f0f0;
-  margin-bottom: 1rem;
+  font-family: 'Dela Gothic One', 'Poppins', sans-serif;
+  font-size: 3rem;
+  text-shadow: 0 3px 10px rgba(255, 255, 255, 0.383);
+  color: #f2f7ff;
+  margin-bottom: 2rem;
 }
 
 .contact-section p {
   font-size: 1.2rem;
+  font-family: 'Play', 'Poppins', sans-serif;
   color: #eaeaea;
+  padding: 1rem;
   margin-bottom: 2rem;
   line-height: 1.5;
 }
 
-.contact-btn {
+.form-btn {
   display: inline-block;
   padding: 1rem 2rem;
   font-size: 1.2rem;
   font-weight: 600;
   border-radius: 10px;
-  background: linear-gradient(135deg, #345998, #5677b4);
+  background: linear-gradient(135deg, #fefff8c2, #809fd7);
   color: white;
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 6px 15px rgba(255, 255, 255, 0.152);
 }
 
-.contact-btn:hover {
-  background: linear-gradient(135deg, #5c7cb7, #6d8ecc);
+.form-btn:hover {
+  background: linear-gradient(135deg, #e2e9f6, #feffef78);
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-.contact-btn:active {
+.form-btn:active {
   transform: translateY(-1px) scale(0.98);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .contact-wrapper {
+    min-height: 85vh;
+  }
+
+  .contact-section{
+    padding: 3rem 2rem;
+  }
+
+  .contact-section h2{
+    font-size: 2rem;
+  }
+
+  .contact-section p{
+    padding: 0;
+  }
 }

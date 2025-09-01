@@ -15,7 +15,7 @@ export default function Navbar() {
 
     useEffect(() => {
         const handleScroll = () => {
-            const scrollPosition = window.scrollY + 200; // μικρό offset για καλύτερη ανίχνευση
+            const scrollPosition = window.scrollY + 200; 
             links.forEach(({ href }) => {
                 const id = href.replace("#", "");
                 const section = document.getElementById(id);
@@ -35,9 +35,11 @@ export default function Navbar() {
 
     return (
         <>
-            <nav className="navbar navbar-dark fixed-top shadow-sm"
+            <nav className="navbar navbar-dark fixed-top"
                 style={{
-                    background: "linear-gradient(90deg, #4b6cb7, #182848)",
+                    backgroundColor: "#030303ff",
+                    background: "linear-gradient(90deg, #0b0b0bff, #1d1f22ff)",
+                    boxShadow: "0 0 5px rgba(146, 146, 146, 0.33)",
                     paddingTop: "0.4rem",
                     paddingBottom: "0.4rem"
                 }}>
@@ -49,12 +51,12 @@ export default function Navbar() {
                             cursor: "pointer",
                             padding: "0 0 10px"
                         }}><img
-                            src="./Personal_Trainer(2).png"           // βάζεις εδώ το όνομα του αρχείου σου στο public
+                            src="./Personal_Trainer(2).png"          
                             alt="Logo"
                             style={{ 
                                 height: "35px"
 
-                            }} // ύψος που θέλεις
+                            }} 
                         /></a>
 
                     <ul className="navbar-nav d-none d-md-flex flex-row">

@@ -1,23 +1,36 @@
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 70px;
+#root {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  box-sizing: border-box;
 }
 
-section, div[id] {
+section {
+  padding: 0 1rem; 
   min-height: 100vh;
-  padding: 70px 0; /* για να μην καλύπτει η navbar το section */
+  overflow: hidden;
+  scroll-margin-top: 90px
 }
 
-/* Για tablet */
-@media (max-width: 992px) {
-  html {
-    scroll-padding-top: 50px; /* μικρότερο navbar */
-  }
+.app-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  min-height: 100vh;
 }
 
-/* Για κινητό */
-@media (max-width: 576px) {
-  html {
-    scroll-padding-top: 30px; /* ακόμα μικρότερο */
-  }
+.app-container::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.75)), url('/src/assets/background-image-pt.jpeg');
+  filter: blur(3px);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  transform: scale(1.05);
 }
+
+
+

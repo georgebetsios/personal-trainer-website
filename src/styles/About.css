@@ -10,13 +10,14 @@
 
 .about-card {
     position: relative;
-    background-color: rgba(255, 255, 255, 0.25);
-    border: 1px solid rgba(255, 255, 255, 0.6);
+    max-width: 400px;
+    background-color: rgba(255, 255, 255, 0.044);
+    border: 1px solid rgba(255, 255, 255, 0.141);
     backdrop-filter: blur(6px);
     padding: 2rem 1rem;
     border-radius: 1rem;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    max-width: 300px;
+    
     flex: 1 1 250px;
     opacity: 0;
     transform: translateX(50%);
@@ -28,29 +29,53 @@
     opacity: 1;
 }
 
+.about-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(249, 249, 249, 0.305);
+}
+
 .about-card h3 {
-    font-size: 1.6rem;
-    color: #30485f;
-    /* πιο σκούρο χρώμα για τίτλους */
+    font-size: 1.7rem;
+    font-family: 'Alegreya Sans', 'Arial', sans-serif;
+    color: rgb(255, 240, 221);
     margin-bottom: 1rem;
     text-align: center;
+    text-shadow: 0 4px 10px rgba(255, 255, 255, 0.341);
 }
 
 .about-card p {
     font-size: 1.1rem;
-    color: #1c1c1c;
-    /* σκούρο κείμενο για ευκρίνεια */
+    font-family: 'Play', 'Poppins', sans-serif;
+    color: #e4e2e2;
     line-height: 1.5;
     text-align: center;
 }
 
 .about-section-container {
     padding: 2rem 0;
+    margin-bottom: 5rem;
 }
 
 .about-title {
-    font-family: 'Montserrat', 'Poppins', sans-serif;
-    font-size: 2rem;
+    font-family: 'Dela Gothic One', 'Poppins', sans-serif;
+    font-size: 3rem;
     font-weight: 530;
-    color: #eaeef5;
+    text-shadow: 0 4px 10px rgba(255, 255, 255, 0.432);
+    color: #f2f7ff;
+}
+
+.home-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .about-title{
+        font-size: 2rem;
+    }
+
+    .home-image{
+        height: 300px;
+    }
 }

@@ -25,20 +25,18 @@ export default function Contact() {
   }, []);
 
   return (
-    <div className="d-flex justify-content-center" style={{
-      padding:0
-    }}>
+    <div className="contact-wrapper">
       <div
         className={`contact-section text-center ${visible ? "visible" : ""}`}
         ref={contactRef}
       >
-        <h2 className="mb-3">Επικοινωνία</h2>
+        <h2 className="mb-4">Επικοινωνία</h2>
         <p>Συμπλήρωσε τη φόρμα για να κλείσεις ραντεβού:</p>
         <a
           href="https://docs.google.com/forms/d/e/1FAIpQLSf6fHX8KBFBOaf5pM9JmG2i7McY4zhMf2kkHc7uS7bznfECzA/viewform"
           target="_blank"
           rel="noopener noreferrer"
-          className="contact-btn"
+          className="form-btn"
         >
           Άνοιγμα Φόρμας
         </a>

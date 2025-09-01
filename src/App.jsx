@@ -8,13 +8,27 @@ import './App.css';
 
 function App() {
   return (
-    <>
+    <div className="app-container">
       <Navbar />
-      <div id="home"><Home /></div>
-      <div id="about"><About /></div>
-      <div id="services"><Services /></div>
-      <div id="contact"><Contact /></div>
-    </>
+
+      <main style={{ margin: '0 auto' }}>
+        <section id="home">
+          <Home />
+        </section>
+
+        <section id="about">
+          <About />
+        </section>
+
+        <section id="services">
+          <Services />
+        </section>
+
+        <section id="contact">
+          <Contact />
+        </section>
+      </main>
+    </div>
   );
 }
 
