@@ -49,7 +49,6 @@ export default function About() {
                         src="./photo-profil.jpg"
                         alt="Δημήτρης - Personal Trainer"
                         className="rounded-circle home-image"
-                        style={{ maxHeight: "400px", width: "auto", objectFit: "cover" }}
                     />
                 </div>
     </div>
