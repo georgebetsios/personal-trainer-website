@@ -78,11 +78,7 @@
         font-size: 2rem;
     }
 
-    .home-image {
-        height: 360px;
-    }
-
     .about-section{
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
     }
 }
