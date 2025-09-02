@@ -48,7 +48,7 @@ export default function About() {
                     <img
                         src="./photo-profil.jpg"
                         alt="Δημήτρης - Personal Trainer"
-                        className="rounded-circle home-image"
+                        className="home-image"
                     />
                 </div>
     </div>
