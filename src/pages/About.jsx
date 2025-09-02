@@ -44,7 +44,7 @@ export default function About() {
         ))}
       </div>
 
-      <div>
+      <div className="home-image-container">
         <img
           src="./photo-profil.jpg"
           alt="Δημήτρης - Personal Trainer"

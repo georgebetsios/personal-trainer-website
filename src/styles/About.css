@@ -65,12 +65,16 @@
     color: #f2f7ff;
 }
 
+.home-image-container {
+  display: flex;
+  justify-content: center;
+}
+
 .home-image {
   max-width: 100%;
-  height: auto;
   object-fit: cover;
   border-radius:50%;
-  max-height: 400px;
+  height: 400px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.96);
 }
 
