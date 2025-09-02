@@ -44,13 +44,13 @@ export default function About() {
         ))}
       </div>
 
-      <div className="home-image">
-                    <img
-                        src="./photo-profil.jpg"
-                        alt="Δημήτρης - Personal Trainer"
-                        className="home-image"
-                    />
-                </div>
+      <div>
+        <img
+          src="./photo-profil.jpg"
+          alt="Δημήτρης - Personal Trainer"
+          className="home-image"
+        />
+      </div>
     </div>
   );
 }
