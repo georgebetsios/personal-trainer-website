@@ -1,15 +1,26 @@
 import React from "react";
-import Navbar from "./components/Navbar";
+
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import './App.css';
 
 function App() {
+
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.state?.scrollTo) {
+      const section = document.getElementById(location.state.scrollTo);
+      if (section) section.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [location]);
+  
   return (
     <div className="app-container">
-      <Navbar />
 
       <main style={{ margin: '0 auto' }}>
         <section id="home">

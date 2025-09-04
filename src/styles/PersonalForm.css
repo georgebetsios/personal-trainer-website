@@ -1,0 +1,126 @@
+.form-page-background {
+    background-color: #6060605f;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-page-container {
+    max-width: 600px;
+    margin: 135px auto 50px;
+    padding: 30px;
+    background-color: #edf3ff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-page-container h2 {
+    font-family: 'Play', 'Poppins', sans-serif;
+    text-align: center;
+    margin-bottom: 25px;
+    margin-top: 1rem;
+    color: #333333;
+    font-size: 36px;
+    font-weight: 550;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    display: block;
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #555;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.weight-height-container {
+    display: flex;
+    justify-content: space-between; /* αφήνει χώρο ανάμεσα στα inputs */
+}
+
+.weight-height-container input {
+    width: 45%; /* μικρότερο από 50% για να χωράνε και το space */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box; /* σημαντικό για padding */
+}
+
+
+.submit-btn {
+    margin-top: 25px;
+    padding: 12px;
+    background-color: #30383f;
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: #1e2124bb;
+    transform: translateY(-2px);
+}
+
+.success-msg {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 600;
+    color: green;
+}
+
+@media (max-width: 640px) {
+    .form-page-container {
+        margin: 125px auto 50px;
+        padding: 20px;
+        width: 90%;
+    }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+        font-size: 14px;
+    }
+
+    .submit-btn {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .form-page-container h2 {
+        font-size: 32px;
+    }
+}

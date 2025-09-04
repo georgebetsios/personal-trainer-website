@@ -30,7 +30,6 @@
   font-size: 3rem;
   text-shadow: 0 3px 10px rgba(255, 255, 255, 0.383);
   color: #f2f7ff;
-  margin-bottom: 2rem;
 }
 
 .contact-section p {
@@ -38,11 +37,12 @@
   font-family: 'Play', 'Poppins', sans-serif;
   color: #eaeaea;
   padding: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   line-height: 1.5;
 }
 
 .form-btn {
+  width: 210px;
   display: inline-block;
   padding: 1rem 2rem;
   font-size: 1.2rem;
@@ -81,5 +81,7 @@
 
   .contact-section p{
     padding: 0;
+    margin: 2rem 0 1rem;
   }
+
 }

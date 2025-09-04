@@ -1,4 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
+import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
+import PersonalForm from "./PersonalForm";
 import "../styles/Contact.css";
 
 export default function Contact() {
@@ -31,14 +33,19 @@ export default function Contact() {
         ref={contactRef}
       >
         <h2 className="mb-4">Επικοινωνία</h2>
-        <p>Συμπλήρωσε τη φόρμα για να κλείσεις ραντεβού:</p>
+        <p>Συμπλήρωσε τη φόρμα για Personal:</p>
         <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLSf6fHX8KBFBOaf5pM9JmG2i7McY4zhMf2kkHc7uS7bznfECzA/viewform"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/personal-trainer-website/personal-form"
+          className="form-btn mb-4"
+        >
+          Φόρμα Personal
+        </a>
+        <p>Συμπλήρωσε τη φόρμα για Online:</p>
+        <a
+          href="/personal-trainer-website/online-form"
           className="form-btn"
         >
-          Άνοιγμα Φόρμας
+          Φόρμα Online
         </a>
       </div>
     </div>
