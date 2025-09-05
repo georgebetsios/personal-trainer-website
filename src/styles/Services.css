@@ -7,6 +7,7 @@
     gap: 2rem;
     background-color: transparent;
     overflow: hidden;
+    cursor: default;
 }
 
 .service-card {
@@ -22,7 +23,7 @@
     flex: 1 1 250px;
     opacity: 0;
     transform: translateX(50%);
-    transition: all 0.8s ease;
+    transition: all 1s ease;
 }
 
 .service-card.visible {
@@ -57,6 +58,7 @@
     font-weight: 530;
     text-shadow: 0 4px 10px rgba(255, 255, 255, 0.432);
     color: #f2f7ff;
+    cursor: default;
 }
 
 @media (max-width: 768px) {
