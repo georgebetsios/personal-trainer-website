@@ -46,8 +46,11 @@ export default function FormPage() {
         <form ref={form} onSubmit={sendEmail} className="contact-form">
           <input type="hidden" name="form_type" value="Online" />
 
-          <label>Ονοματεπώνυμο *</label>
-          <input type="text" name="full_name" pattern="[A-Za-zΑ-Ωα-ωΆ-Ώά-ώ\s]+" required />
+          <label>Όνομα *</label>
+          <input type="text" name="first_name" pattern="[A-Za-zΑ-Ωα-ωΆ-Ώά-ώ\s]+" required />
+
+          <label>Επώνυμο *</label>
+          <input type="text" name="last_name" pattern="[A-Za-zΑ-Ωα-ωΆ-Ώά-ώ\s]+" required />
 
           <label>Instagram</label>
           <input type="text" name="instagram" />

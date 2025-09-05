@@ -157,7 +157,7 @@ select:-webkit-autofill:focus {
     .contact-form input,
     .contact-form select,
     .contact-form textarea {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .submit-btn {

@@ -1,8 +1,16 @@
 section {
-  padding: 0 1rem; 
+  padding: 0 1rem;
   min-height: 100vh;
   overflow: hidden;
-  scroll-margin-top: 90px
+  scroll-margin-top: 90px;
+}
+
+#contact {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 2rem;
 }
 
 .app-container {
@@ -15,8 +23,11 @@ section {
 .app-container::before {
   content: "";
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.75)), url('/src/assets/background-image-pt.jpeg');
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.75)), url('/src/assets/background-image-pt.jpeg');
   filter: blur(4px);
   background-size: cover;
   background-position: center;
@@ -25,5 +36,8 @@ section {
   transform: scale(1.05);
 }
 
-
-
+@media (max-width: 768px) {
+  #contact {
+    min-height: 95vh;
+  }
+}
