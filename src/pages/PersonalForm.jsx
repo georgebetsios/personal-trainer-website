@@ -1,13 +1,17 @@
 import React, { useRef, useState } from "react";
 import emailjs from "emailjs-com";
+import { useNavigate } from "react-router-dom";
 import "../styles/PersonalForm.css";
 
 export default function FormPage() {
   const form = useRef();
-  const [success, setSuccess] = useState("");
+  const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setLoading(true);
 
     emailjs.sendForm(
       import.meta.env.VITE_EMAILJS_SERVICE_ID,
@@ -17,12 +21,20 @@ export default function FormPage() {
     ).then(
       (result) => {
         console.log(result.text);
-        setSuccess("Το μήνυμά σας στάλθηκε!");
         form.current.reset();
+        setLoading(false);
+
+        if (location.pathname !== "/") {
+          navigate("/", { state: { scrollTo: "home" } });
+        } else {
+          const section = document.getElementById("home");
+          if (section) section.scrollIntoView({ behavior: "smooth" });
+        }
       },
       (error) => {
         console.log(error.text);
-        setSuccess("Σφάλμα κατά την αποστολή. Προσπαθήστε ξανά.");
+        setError("Σφάλμα κατά την αποστολή. Προσπαθήστε ξανά.");
+        setLoading(false);
       }
     );
   };
@@ -35,7 +47,7 @@ export default function FormPage() {
           <input type="hidden" name="form_type" value="Personal" />
 
           <label>Ονοματεπώνυμο *</label>
-          <input type="text" name="full_name" required />
+          <input type="text" name="full_name" pattern="[A-Za-zΑ-Ωα-ωΆ-Ώά-ώ\s]+" required />
 
           <label>Instagram</label>
           <input type="text" name="instagram" />
@@ -49,15 +61,16 @@ export default function FormPage() {
           <label>Βάρος / Ύψος *</label>
           <div className="weight-height-container">
             <input
-              type="text"
+              type="number"
               name="weight"
               placeholder="Βάρος (kg)"
               required
             />
             <input
-              type="text"
+              type="number"
               name="height"
               placeholder="Ύψος (m)"
+              step="0.01"
               required
             />
           </div>
@@ -68,7 +81,7 @@ export default function FormPage() {
           <label>
             Πόσους μήνες ηταν το περισσότερο που έκανες συνεχόμενα προπόνηση χωρίς διακοπή (διακοπή απο 7 μερες και άνω)*
           </label>
-          <input type="text" name="training_streak" required />
+          <input type="text" name="training_streak" required placeholder="π.χ. 5" />
 
           <label>Πόσες φορές την εβδομάδα κάνεις προπόνηση με βάρη;</label>
           <select name="weights_per_week">
@@ -88,7 +101,7 @@ export default function FormPage() {
           <textarea name="goal" rows="3" />
 
           <label>Πόσα χρήματα υπολογίζεις να ξοδέψεις μηνιαίως;</label>
-          <input type="text" name="budget" />
+          <input type="number" name="budget" />
 
           <label>Ακολουθείς κάποιο πλάνο διατροφής; *</label>
           <select name="diet_plan" required>
@@ -97,10 +110,24 @@ export default function FormPage() {
             <option value="Όχι">Όχι</option>
           </select>
 
-          <button type="submit" className="submit-btn">Αποστολή</button>
+          <button type="submit" className="submit-btn" disabled={loading}>
+            {loading ? <div className="loader"></div> : 'Αποστολή'}
+          </button>
+          <button className="exit-btn"
+            onClick={(e) => {
+              e.preventDefault();
+              if (location.pathname !== "/") {
+
+                navigate("/", { state: { scrollTo: "contact" } });
+              } else {
+
+                const section = document.getElementById("contact");
+                if (section) section.scrollIntoView({ behavior: "smooth" });
+              }
+            }}>Έξοδος</button>
         </form>
 
-        {success && <p className="success-msg">{success}</p>}
+        {error && <p className="error-msg">{error}</p>}
       </div>
     </div>
   );
