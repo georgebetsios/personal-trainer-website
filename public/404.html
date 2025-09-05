@@ -4,9 +4,17 @@
     <meta charset="utf-8">
     <title>Redirecting...</title>
     <script type="text/javascript">
-      // Redirect όλα τα routes πίσω στο index.html
-      var redirectTo = window.location.protocol + '//' + window.location.host + '/personal-trainer-website/';
-      window.location.replace(redirectTo);
+      (function() {
+        // Παίρνουμε το path που χάλασε (χωρίς το basename)
+        var path = window.location.pathname.replace('/personal-trainer-website', '');
+        var search = window.location.search || "";
+        var hash = window.location.hash || "";
+
+        // Στέλνουμε τον χρήστη στο index.html με το path ως hash
+        var redirectTo = "/personal-trainer-website/#" + path + search + hash;
+
+        window.location.replace(redirectTo);
+      })();
     </script>
   </head>
   <body>
