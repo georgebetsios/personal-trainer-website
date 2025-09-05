@@ -11,7 +11,7 @@
         var hash = window.location.hash || "";
 
         // Στέλνουμε τον χρήστη στο index.html με το path ως hash
-        var redirectTo = "/personal-trainer-website/#" + path + search + hash;
+        var redirectTo = "/personal-trainer-website" + path + search + hash;
 
         window.location.replace(redirectTo);
       })();
