@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Redirecting...</title>
     <script type="text/javascript">
-      (function() {
-        // Παίρνουμε το path που χάλασε (χωρίς το basename)
-        var path = window.location.pathname.replace('/personal-trainer-website', '');
-        var search = window.location.search || "";
-        var hash = window.location.hash || "";
+      // Παίρνουμε το path που ζήτησε ο χρήστης
+      var path = window.location.pathname;
+      var search = window.location.search || "";
+      var hash = window.location.hash || "";
 
-        // Στέλνουμε τον χρήστη στο index.html με το path ως hash
-        var redirectTo = "/personal-trainer-website" + path + search + hash;
+      // Στέλνουμε τον χρήστη στο index.html αλλά αποθηκεύουμε το path στο query
+      var url = "/personal-trainer-website/index.html?redirect=" 
+        + encodeURIComponent(path + search + hash);
 
-        window.location.replace(redirectTo);
-      })();
+      window.location.replace(url);
     </script>
   </head>
   <body>
