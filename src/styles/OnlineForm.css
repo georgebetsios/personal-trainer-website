@@ -75,6 +75,7 @@ select:-webkit-autofill:focus {
 
 
 .contact-form textarea {
+    width: 100%;
     resize: vertical;
 }
 
@@ -92,6 +93,9 @@ select:-webkit-autofill:focus {
     box-sizing: border-box; /* σημαντικό για padding */
 }
 
+.select-width {
+    width: 100%;
+}
 
 .submit-btn {
     margin-top: 25px;

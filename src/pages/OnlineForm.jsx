@@ -6,6 +6,9 @@ import "../styles/OnlineForm.css";
 export default function FormPage() {
   const form = useRef();
   const navigate = useNavigate();
+  const [hasProblem, setHasProblem] = useState("");
+  const [dietPlan, setDietPlan] = useState("");
+  const [dietWilling, setDietWilling] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
@@ -13,14 +16,40 @@ export default function FormPage() {
     e.preventDefault();
     setLoading(true);
 
+    const formElement = form.current;
+    const dietValue = dietPlan === "Ναι" ? "Ναι" : dietWilling === "Ναι" ? "Είμαι διατεθειμένος" : "Δεν είμαι διατεθειμένος";
+
+    const healthProblem = formElement.health_problem.value;
+    const healthDetails = formElement.health_details?.value || "";
+
+    let hiddenInput = formElement.querySelector('input[name="health_info"]');
+    if (!hiddenInput) {
+      hiddenInput = document.createElement("input");
+      hiddenInput.type = "hidden";
+      hiddenInput.name = "health_info";
+      formElement.appendChild(hiddenInput);
+    }
+
+    let hiddenDietInput = form.current.querySelector('input[name="diet_info"]');
+    if (!hiddenDietInput) {
+      hiddenDietInput = document.createElement("input");
+      hiddenDietInput.type = "hidden";
+      hiddenDietInput.name = "diet_info";
+      form.current.appendChild(hiddenDietInput);
+    }
+
+    hiddenInput.value = healthProblem === "Ναι" ? healthDetails : "Όχι";
+
+    hiddenDietInput.value = dietValue;
+
     emailjs.sendForm(
       import.meta.env.VITE_EMAILJS_SERVICE_ID,
-      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID_ONLINE,
       form.current,
       import.meta.env.VITE_EMAILJS_PUBLIC_KEY
     ).then(
       (result) => {
-        console.log(result.text);
+        // console.log(result.text);
         form.current.reset();
         setLoading(false);
 
@@ -44,7 +73,6 @@ export default function FormPage() {
       <div className="form-page-container">
         <h2>Φόρμα για Online</h2>
         <form ref={form} onSubmit={sendEmail} className="contact-form">
-          <input type="hidden" name="form_type" value="Online" />
 
           <label>Όνομα *</label>
           <input type="text" name="first_name" pattern="[A-Za-zΑ-Ωα-ωΆ-Ώά-ώ\s]+" required />
@@ -78,8 +106,18 @@ export default function FormPage() {
             />
           </div>
 
-          <label>Ηλικία</label>
-          <input type="number" name="age" min="10" max="100" />
+          <label>Ηλικία *</label>
+          <input type="number" name="age" min="10" max="100" required />
+
+          <label>Έχεις πρόσβαση σε γυμναστήριο; *</label>
+          <select name="gym_access" required>
+            <option value="">Επίλεξε...</option>
+            <option value="Ναι">Ναι</option>
+            <option value="Όχι">Όχι</option>
+          </select>
+
+          <label>Πόσο χρόνο διαθέτεις για κάθε προπόνηση; *</label>
+          <input type="text" name="workout_duration" required placeholder="π.χ. 45 λεπτά" />
 
           <label>
             Πόσους μήνες ηταν το περισσότερο που έκανες συνεχόμενα προπόνηση χωρίς διακοπή (διακοπή απο 7 μερες και άνω)*
@@ -98,20 +136,66 @@ export default function FormPage() {
           </select>
 
           <label>Πόσες φορές κάνεις αερόβιο την εβδομάδα;</label>
-          <input type="text" name="cardio_per_week" placeholder="π.χ. 2" />
+          <input type="number" name="cardio_per_week" placeholder="π.χ. 2" />
+
+          <label>Πόσες ώρες κοιμάσαι κατά μέσο όρο;</label>
+          <input type="number" name="number_of_sleep" placeholder="π.χ. 8" />
 
           <label>Ποιος είναι ο στόχος σου;</label>
           <textarea name="goal" rows="3" />
+
+          <label>Σε τι χρονικό διάστημα θα ήθελες να τον πετύχεις;</label>
+          <input type="text" name="time_goal" placeholder="π.χ 6 μήνες" />
+
+          <label>Έχεις κάποια πάθηση ή τραυματισμό που πρέπει να γνωρίζω; *</label>
+          <select
+            name="health_problem"
+            value={hasProblem}
+            onChange={(e) => setHasProblem(e.target.value)}
+            required
+          >
+            <option value="">Επίλεξε...</option>
+            <option value="Ναι">Ναι</option>
+            <option value="Όχι">Όχι</option>
+          </select>
+
+          {hasProblem === "Ναι" && (
+            <div>
+              <label>Αν ναι τι:</label>
+              <textarea name="health_details" rows="3" required />
+            </div>
+          )}
 
           <label>Πόσα χρήματα υπολογίζεις να ξοδέψεις μηνιαίως;</label>
           <input type="number" name="budget" />
 
           <label>Ακολουθείς κάποιο πλάνο διατροφής; *</label>
-          <select name="diet_plan" required>
+          <select
+            name="diet_plan"
+            value={dietPlan}
+            onChange={(e) => setDietPlan(e.target.value)}
+            required
+          >
             <option value="">Επίλεξε...</option>
             <option value="Ναι">Ναι</option>
             <option value="Όχι">Όχι</option>
           </select>
+
+          {dietPlan === "Όχι" && (
+            <div>
+              <label>Είσαι διατεθειμένος να ακολουθήσεις κάποιο πλάνο διατροφής;</label>
+              <select className="select-width"
+                name="diet_willing"
+                value={dietWilling}
+                onChange={(e) => setDietWilling(e.target.value)}
+                required
+              >
+                <option value="">Επίλεξε...</option>
+                <option value="Ναι">Ναι</option>
+                <option value="Όχι">Όχι</option>
+              </select>
+            </div>
+          )}
 
           <button type="submit" className="submit-btn" disabled={loading}>
             {loading ? <div className="loader"></div> : 'Αποστολή'}

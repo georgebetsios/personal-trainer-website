@@ -1,6 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
-import PersonalForm from "./PersonalForm";
 import "../styles/Contact.css";
 
 export default function Contact() {
