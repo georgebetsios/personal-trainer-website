@@ -7,6 +7,7 @@
 }
 
 .form-page-container {
+    width: 100%;
     max-width: 600px;
     margin: 135px auto 50px;
     padding: 30px;

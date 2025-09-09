@@ -71,7 +71,7 @@ export default function FormPage() {
   return (
     <div className="form-page-background">
       <div className="form-page-container">
-        <h2>Φόρμα για Personal</h2>
+        <h2>Personal Form</h2>
         <form ref={form} onSubmit={sendEmail} className="contact-form">
 
           <label>Όνομα *</label>
@@ -116,11 +116,6 @@ export default function FormPage() {
             <option value="Όχι">Όχι</option>
           </select>
 
-          <label>
-            Πόσους μήνες ηταν το περισσότερο που έκανες συνεχόμενα προπόνηση χωρίς διακοπή (διακοπή απο 7 μερες και άνω)*
-          </label>
-          <input type="text" name="training_streak" required placeholder="π.χ. 5" />
-
           <label>Πόσες φορές την εβδομάδα κάνεις προπόνηση με βάρη;</label>
           <select name="weights_per_week">
             <option value="">Επίλεξε...</option>
@@ -138,8 +133,16 @@ export default function FormPage() {
           <label>Πόσες ώρες κοιμάσαι κατά μέσο όρο;</label>
           <input type="number" name="number_of_sleep" placeholder="π.χ. 8" />
 
-          <label>Ποιος είναι ο στόχος σου;</label>
-          <textarea name="goal" rows="3" />
+          <label>Ποιος είναι ο στόχος σου; *</label>
+          <select name="goal" required>
+            <option value="">Επίλεξε...</option>
+            <option value="Απώλεια βάρους">Απώλεια βάρους</option>
+            <option value="Αύξηση μυϊκής μάζας">Αύξηση μυϊκής μάζας</option>
+            <option value="Γενική φυσική κατάσταση">Γενική φυσική κατάσταση</option>
+            <option value="Αύξηση αντοχής">Αύξηση αντοχής</option>
+            <option value="Δύναμη">Δύναμη</option>
+            <option value="Επανένταξη μετά από τραυματισμό">Επανένταξη μετά από τραυματισμό</option>
+          </select>
 
           <label>Σε τι χρονικό διάστημα θα ήθελες να τον πετύχεις;</label>
           <input type="text" name="time_goal" placeholder="π.χ 6 μήνες" />
