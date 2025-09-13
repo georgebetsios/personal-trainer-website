@@ -3,7 +3,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center; 
     gap: 2rem;
     background-color: transparent;
     overflow: hidden;
@@ -19,7 +18,6 @@
     border-radius: 1rem;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     max-width: 300px;
-    height: 180px;
     flex: 1 1 250px;
     opacity: 0;
     transform: translateX(50%);
@@ -53,12 +51,30 @@
 }
 
 .services-title {
-    font-family: 'Dela Gothic One', 'Poppins', sans-serif;
-    font-size: 3rem;
-    font-weight: 530;
-    text-shadow: 0 4px 10px rgba(255, 255, 255, 0.432);
-    color: #f2f7ff;
-    cursor: default;
+  font-family: 'Dela Gothic One', 'Poppins', sans-serif;
+  font-size: 3rem;
+  font-weight: 530;
+  text-shadow: 0 4px 10px rgba(255, 255, 255, 0.432);
+  color: #f2f7ff;
+  cursor: default;
+
+  display: flex;
+  flex-direction: row; 
+  justify-content: center; 
+  align-items: center;     
+  gap: 1rem;               
+}
+
+.services-title .underline {
+  background-color: #f2f7ff60;
+  height: 2px;      
+  width: 35px;      
+  display: inline-block;
+}
+
+.services-title .title {
+  display: inline-block;
+  text-align: center;
 }
 
 @media (max-width: 768px) {

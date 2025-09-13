@@ -24,21 +24,25 @@ export default function Services() {
   const services = [
     {
       title: "Personal Training",
-      text: "Προσωπική καθοδήγηση και ασκήσεις προσαρμοσμένες σε εσένα."
+      text: "Προσωπική καθοδήγηση με ασκήσεις πλήρως προσαρμοσμένες στο σώμα σου και στο επίπεδό σου."
     },
     {
       title: "Online Coaching",
-      text: "Ασκήσεις και παρακολούθηση μέσω βίντεο και εφαρμογών."
+      text: "Πρόγραμμα άσκησης προσαρμοσμένο στο επίπεδο και τους στόχους σας, με σαφείς οδηγίες και παρακολούθηση της προόδου σου."
     },
     {
       title: "Συνεργασία με διατροφολόγο",
-      text: "Υποστήριξη στη διατροφή για καλύτερα αποτελέσματα."
+      text: "Ολοκληρωμένη υποστήριξη στη διατροφή για να ενισχύσετε τα αποτελέσματα της προπόνησής σας και να διατηρήσετε ισορροπία."
     }
   ];
 
   return (
     <div className="services-section-container">
-      <h2 className="services-title text-center mb-4 mt-4">Υπηρεσίες</h2>
+      <h2 className="services-title text-center mb-4 mt-4">
+        <span className="underline"></span>
+        <span className="title">Υπηρεσίες</span>
+        <span className="underline"></span>
+      </h2>
       <div className="services-section">
         {services.map((service, i) => (
           <div

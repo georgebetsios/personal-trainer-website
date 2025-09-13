@@ -34,7 +34,11 @@ export default function About() {
 
   return (
     <div className="about-section-container">
-      <h2 className="about-title text-center mb-4 mt-4">Σxετικά με εμένα</h2>
+      <h2 className="about-title text-center mb-4 mt-4">
+        <span className="underline-1"></span>
+        <span className="title">Σxετικά με εμένα</span>
+        <span className="underline-2"></span>
+      </h2>
       <div className="about-section">
         {aboutCards.map((card, i) => (
           <div className="about-card" key={i} ref={el => cardsRef.current[i] = el}>

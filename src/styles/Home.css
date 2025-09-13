@@ -4,11 +4,12 @@
   align-items: center;
   background-color: transparent;
   animation: fadeSlideUp 0.8s ease forwards;
+  margin-bottom: 100px;
 }
 
 .home-container {
   position: relative;
-  max-width: 900px;  
+  max-width: 900px;
   color: #363232;
   text-align: center;
   opacity: 1;
@@ -16,15 +17,22 @@
   padding: 3rem 4rem 4rem;
   margin-top: 150px;
   cursor: default;
-  background-color:rgba(253, 253, 253, 0.1);
+  background-color: rgba(253, 253, 253, 0.1);
   border: 1px solid rgba(130, 130, 130, 0.008);
   border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(200, 200, 200, 0.160),0 -8px 20px rgba(200, 200, 200, 0.160);
+  box-shadow: 0 8px 20px rgba(200, 200, 200, 0.160), 0 -8px 20px rgba(200, 200, 200, 0.160);
 }
 
 @keyframes fadeSlideUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .home-text {
@@ -33,13 +41,82 @@
   animation: fadeSlideUp 0.8s forwards;
 }
 
-.home-text:nth-child(1) { animation-delay: 0.2s; }
-.home-text:nth-child(2) { animation-delay: 0.4s; }
-.home-text:nth-child(3) { animation-delay: 0.6s; }
-.home-text:nth-child(4) { animation-delay: 0.8s; }
-.home-text:nth-child(5) { animation-delay: 1s; }
-.home-text:nth-child(6) { animation-delay: 1.2s; }
-.home-text:nth-child(7) { animation-delay: 1.4s; }
+.home-text:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.home-text:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.home-text:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.home-text:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.home-text:nth-child(5) {
+  animation-delay: 1s;
+}
+
+.home-text:nth-child(6) {
+  animation-delay: 1.2s;
+}
+
+.home-text:nth-child(7) {
+  animation-delay: 1.4s;
+}
+
+.home-text.name-role {
+  display: flex;
+  flex-direction: column; /* κάθετη στοίχιση */
+  align-items: center;    /* κεντράρισμα οριζόντια */
+  gap: 0.2rem;            /* απόσταση μεταξύ στοιχείων */
+}
+
+.home-text.name-role .divider-line {
+  margin-top: 0.5rem;
+  width: 100px;           /* πλάτος γραμμής */
+  height: 2px;           /* ύψος γραμμής */
+  background-color: #ebf5ff;
+}
+
+.home-list {
+  list-style-type: initial;
+  /* βγάζουμε τα default bullets */
+  padding-left: 2rem;
+  margin: 30px 0;
+}
+
+.home-list li {
+  position: relative;
+  padding-left: 10px;
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+  color: #f2fbff;
+  line-height: 1.6;
+  text-align: left;
+  font-weight: bold;
+}
+
+.home-text.last-motiv {
+  margin-top: 1.8rem;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 1.4rem;
+  color: #f2fbff;
+  text-align: center;
+  font-style: italic;
+}
+
+.home-text.motivate {
+  font-family: 'Alegreya Sans', sans-serif;
+  font-weight: 800;
+  font-size: 1.7rem;
+  font-style: italic;
+  color: #f2fbff;
+}
 
 
 .contact-btn {
@@ -48,6 +125,7 @@
   background: rgba(255, 255, 255, 0.94);
   color: #101010;
   padding: 0.8rem 1.8rem;
+  font-weight: 600;
   font-size: 1.2rem;
   border-radius: 8px;
   cursor: pointer;
@@ -57,16 +135,16 @@
 }
 
 .contact-btn:hover {
-  background: rgba(196, 204, 209, 0.794);
-  color: #f9f8f8;
+  background: rgb(239, 248, 255);
+  color: #05050596;
   transform: translateY(-3px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
 }
 
 
 .contact-btn:active {
   transform: translateY(-1px) scale(0.98);
-  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
 }
 
 
@@ -86,33 +164,33 @@
   letter-spacing: 0.5px;
   margin-bottom: 1.5rem;
   font-size: 1.2rem;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.2); 
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   transition: color 0.3s ease;
 }
 
-.home-section p.lead {
-  font-size: 1.4rem;
-  margin-bottom: 2rem;
-  line-height: 1.6;
-}
 
 @media (max-width: 768px) {
   .home-section {
     padding: 0.5rem 0 4rem;
+    margin-bottom: 1rem;
   }
+
   .home-section h1 {
     font-size: 2.2rem;
   }
-  .home-section p.lead {
-    font-size: 1.2rem;
-  }
+
   .contact-btn {
     font-size: 1rem;
     padding: 1rem 1.5rem;
     margin: 1rem 0;
   }
-  .home-container{
+
+  .home-container {
     padding: 1rem 2rem 2rem;
     margin: 120px auto 60px;
+  }
+
+  .home-list li {
+    margin-bottom: 1.2rem;
   }
 }
