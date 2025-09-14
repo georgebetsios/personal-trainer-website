@@ -66,11 +66,10 @@ export default function Navbar() {
                             cursor: "pointer",
                             padding: "0 0 10px"
                         }}><img
-                            src="./Personal_Trainer(2).png"
+                            src="./Personal_Trainer_logo.png"
                             alt="Logo"
                             style={{
-                                height: "35px"
-
+                                height: "33px"
                             }}
                         /></a>
 

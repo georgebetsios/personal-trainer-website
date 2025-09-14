@@ -69,19 +69,6 @@
   animation-delay: 1.4s;
 }
 
-.home-text.name-role {
-  display: flex;
-  flex-direction: column; /* κάθετη στοίχιση */
-  align-items: center;    /* κεντράρισμα οριζόντια */
-  gap: 0.2rem;            /* απόσταση μεταξύ στοιχείων */
-}
-
-.home-text.name-role .divider-line {
-  margin-top: 0.5rem;
-  width: 100px;           /* πλάτος γραμμής */
-  height: 2px;           /* ύψος γραμμής */
-  background-color: #ebf5ff;
-}
 
 .home-list {
   list-style-type: initial;

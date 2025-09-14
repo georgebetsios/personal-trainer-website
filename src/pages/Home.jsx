@@ -7,10 +7,8 @@ export default function Home() {
             <div
                 className="home-container"
             >
-                <h1 className="fw-bold mb-4 home-text name-role">
-                    <span className="name">Δημήτρης Οικονόμου</span>
-                    <span className="divider-line"></span>
-                    <span className="role">Personal Trainer</span>
+                <h1 className="fw-bold mb-4 home-text ">
+                    Γεια! Είμαι ο Δημήτρης, Personal Trainer
                 </h1>
 
                 <p className="mt-5 mb-4 home-text">
