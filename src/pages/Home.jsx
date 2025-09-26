@@ -7,12 +7,12 @@ export default function Home() {
             <div
                 className="home-container"
             >
-                <h1 className="fw-bold mb-4 home-text ">
-                    Γεια! Είμαι ο Δημήτρης, Personal Trainer
+                <h1 className="fw-bold mb-4 home-text">
+                    Γεια! Είμαι ο Δημήτρης
                 </h1>
 
                 <p className="mt-5 mb-4 home-text">
-                    Προπόνηση με στόχο, σαφές πλάνο και αποτελέσματα που φαίνονται τόσο στο σώμα σου όσο και στην καθημερινότητά σου.
+                    Μαζί βάζουμε στόχους και ακολουθούμε ένα σαφές πλάνο για αποτελέσματα που φαίνονται τόσο στο σώμα σου όσο και στην καθημερινότητά σου.
                 </p>
 
                 <ul className="home-list home-text">
