@@ -23,12 +23,7 @@ export default function About() {
 
   const aboutCards = [
     {
-      title: "Σπουδές",
-      text: "Έχω αποφοιτήσει από το Τμήμα Επιστήμης Φυσικής Αγωγής & Αθλητισμού του Αριστοτελείου Πανεπιστημίου."
-    },
-    {
-      title: "Σεμινάρια",
-      text: "Έχω ολοκληρώσει τα σεμινάρια Personal Training Level 1 και Level 2 από την BODYfit Academy στη Θεσσαλονίκη, τα οποία με έχουν προετοιμάσει να παρέχω υψηλής ποιότητας υπηρεσίες προπόνησης."
+      text: "Απόφοιτος ΤΕΦΑΑ με ειδίκευση στο personal training και το functional bodybuilding. Έχω παρακολουθήσει πληθώρα σεμιναρίων που καλύπτουν διάφορες πτυχές του fitness, όπως strength & conditioning, sleep coaching, advanced hypertrophy techniques, καθώς και σεμινάρια για ειδικούς πληθυσμούς. Εξελίσσομαι συνεχώς και παραμένω ενημερωμένος για τις νέες τάσεις και μεθόδους σε έναν χώρο που αλλάζει διαρκώς, ώστε να μπορώ να προσφέρω πάντα σύγχρονη και ολοκληρωμένη καθοδήγηση σε όσους συνεργάζομαι."
     }
   ];
 
@@ -42,7 +37,6 @@ export default function About() {
       <div className="about-section">
         {aboutCards.map((card, i) => (
           <div className="about-card" key={i} ref={el => cardsRef.current[i] = el}>
-            <h3>{card.title}</h3>
             <p>{card.text}</p>
           </div>
         ))}

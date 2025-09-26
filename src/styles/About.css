@@ -1,22 +1,21 @@
 .about-section {
-    padding: 1rem;
+    padding: 0.5rem;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
-    background-color: transparent;
-    overflow: hidden;
+    background-color: transparent; 
     margin-bottom: 1rem;
     cursor: default;
 }
 
 .about-card {
     position: relative;
-    max-width: 400px;
+    max-width: 600px;
     background-color: rgba(255, 255, 255, 0.044);
     border: 1px solid rgba(255, 255, 255, 0.141);
     backdrop-filter: blur(6px);
-    padding: 2rem 1rem;
+    padding: 2rem 1rem 1.5rem;
     border-radius: 1rem;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 
@@ -36,19 +35,10 @@
     box-shadow: 0 8px 20px rgba(249, 249, 249, 0.305);
 }
 
-.about-card h3 {
-    font-size: 1.7rem;
-    font-family: 'Alegreya Sans', 'Arial', sans-serif;
-    color: rgb(255, 240, 221);
-    margin-bottom: 1rem;
-    text-align: center;
-    text-shadow: 0 4px 10px rgba(255, 255, 255, 0.341);
-}
-
 .about-card p {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     font-family: 'Play', 'Poppins', sans-serif;
-    color: #e4e2e2;
+    color: #ffffff;
     line-height: 1.5;
     text-align: center;
 }
@@ -56,6 +46,7 @@
 .about-section-container {
     padding: 2rem 0;
     margin-bottom: 5rem;
+    overflow: hidden;
 }
 
 .about-title {
@@ -121,5 +112,9 @@
 
     .about-title .underline-2 {
         width: 20%;
+    }
+
+    .about-card p {
+        font-size: 1.18rem;
     }
 }
